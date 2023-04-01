@@ -9,10 +9,10 @@ const questions = [
     "Descripe the project?",
     "What are the installation steps?",
     "Please provide usage instructions?",
-    "Please list your collaborators?",
+    "Please list your collaborators? Pleae make a list using ',' to seperate the collaborators.",
     "What badges do you have?",
     "What features does your project have?",
-    "How can people contribute to your project? Pleae make a list using ',' to seperate",
+    "How can people contribute to your project? ",
     "What test did you run?",
     "What is your github username?",
     "What is your email?"
@@ -62,7 +62,7 @@ function init() {
             name: 'badge',
             type: 'list',
             message: questions[5],
-            choices: ["MIT", "Apache", "Open Source","GNU", "IBM"]
+            choices: ["MIT", "Apache", "Creative_Commons","GNU", "IBM"]
         },
         {
             name: 'features',
@@ -85,7 +85,7 @@ function init() {
             message: questions[10]
         }
     ]).then((answerObj) => {
-        console.log(answerObj);
+        // console.log(answerObj);
         writeToFile('./README.md', answerObj);
     });    
 
