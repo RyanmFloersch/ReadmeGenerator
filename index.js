@@ -12,8 +12,10 @@ const questions = [
     "Please list your collaborators?",
     "What badges do you have?",
     "What features does your project have?",
-    "How can people contribute to your project?",
-    "What test did you run?"
+    "How can people contribute to your project? Pleae make a list using ',' to seperate",
+    "What test did you run?",
+    "What is your github username?",
+    "What is your email?"
 
 ];
 
@@ -58,7 +60,9 @@ function init() {
         },
         {
             name: 'badge',
-            message: questions[5]
+            type: 'list',
+            message: questions[5],
+            choices: ["MIT", "Apache", "Open Source","GNU", "IBM"]
         },
         {
             name: 'features',
@@ -69,8 +73,16 @@ function init() {
             message: questions[7]
         },
         {
-            name: 'test',
+            name: 'tests',
             message: questions[8]
+        },
+        {
+            name: 'username',
+            message: questions[9]
+        },
+        {
+            name: 'email',
+            message: questions[10]
         }
     ]).then((answerObj) => {
         console.log(answerObj);
